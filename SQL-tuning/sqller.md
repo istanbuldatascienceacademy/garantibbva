@@ -1,3 +1,4 @@
+tüm aktif SQller vealışma değerli
 ```
 SELECT sql_id,
        parsing_schema_name,
@@ -12,6 +13,7 @@ ORDER BY elapsed_time DESC
 FETCH FIRST 20 ROWS ONLY;
 ```
 
+Özet veriler
 ```
 
 
@@ -25,6 +27,8 @@ FROM v$sqlarea
 ORDER BY buffer_gets DESC
 FETCH FIRST 20 ROWS ONLY;
 ```
+
+
 ```
 
 SELECT name, namespace, type, sharable_mem, kept
