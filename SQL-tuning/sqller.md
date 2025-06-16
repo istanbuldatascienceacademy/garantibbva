@@ -49,6 +49,7 @@ cate=laptop 100 ürünü filtree
 cardinality =10000 X seelectivity =100
 
 
+```
 
 VARIABLE task_name VARCHAR2(30);
 BEGIN
@@ -60,15 +61,20 @@ BEGIN
     description => 'Tuning task for slow query');
 END;
 /
+```
+```
 
 BEGIN
   DBMS_SQLTUNE.EXECUTE_TUNING_TASK(task_name => 'my_sql_tuning_task');
 END;
 /
+```
+```
 
 SET LONG 10000
 SET PAGESIZE 1000
 SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK('my_sql_tuning_task') FROM DUAL;
+```
 
 GENERAL INFORMATION SECTION
 ---------------------------
