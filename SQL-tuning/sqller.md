@@ -37,3 +37,13 @@ WHERE type IN ('PROCEDURE', 'FUNCTION', 'PACKAGE')
 ORDER BY sharable_mem DESC;
 ```
 
+selectivity
+0---1
+select  *  from product where category='laptop'
+
+product tablosunda 10.000  kayıt  var
+cate=laptop 100 ürünü filtree
+
+100/10000 =0.01
+
+cardinality =10000 X seelectivity =100
