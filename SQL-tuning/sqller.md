@@ -106,7 +106,9 @@ bir sorgu sürekli yavs----- v$sql ile sqlid yakala
 execution plan a bak ----  mantıksız- tuning advisor çalıştır mutlaka
 
 
-
+```
+SQL> select dbms_sqltune.report_sql_monitor from dual;
+```
 
 
 
