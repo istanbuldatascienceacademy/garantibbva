@@ -1,4 +1,4 @@
-
+```
 SELECT
     ind1.table_name,
     ind1.index_name AS parent_index,
@@ -25,4 +25,5 @@ ON ind1.table_name = ind2.table_name
    AND ind1.index_name <> ind2.index_name
    AND ind2.column_list LIKE ind1.column_list || '%'
 ORDER BY ind1.table_name, ind1.index_name;
+```
 
