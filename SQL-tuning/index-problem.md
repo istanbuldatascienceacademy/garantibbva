@@ -26,4 +26,21 @@ ON ind1.table_name = ind2.table_name
    AND ind2.column_list LIKE ind1.column_list || '%'
 ORDER BY ind1.table_name, ind1.index_name;
 ```
-
+```
+SELECT *
+FROM (
+    SELECT 
+        sql_id,
+        parsing_schema_name,
+        executions,
+        cpu_time,
+        elapsed_time,
+        disk_reads,
+        buffer_gets,
+        sql_text
+    FROM v$sql
+    WHERE cpu_time IS NOT NULL
+    ORDER BY cpu_time DESC
+)
+WHERE ROWNUM <= 5;
+```
